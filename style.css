@@ -1,4 +1,18 @@
 #output {
     font-size: 20px;
     color: #2d3748;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+#click-demo { 
+    font-weight: bold; 
+    color: #1a1a1a; 
+    font-size: 24px;
+    padding: 20px;
+    border: 2px dashed #007acc;
+    cursor: pointer; /* Taaki user ko pata chale ki ispar click kiya ja sakta hai */
+    transition: all 0.3s ease; /* Smmooooth animation ke liye */
 }
