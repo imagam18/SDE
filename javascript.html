@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<script src="javascript.js"></script>
 <h1>My First Web Page</h1>
 <p>My First Paragraph</p>
 
@@ -36,6 +36,36 @@ console.log(5 + 6);
 </script>
 
 
+<button onclick="window.print()">Print</button>
+
+<p id="demo3"></p>
+
+<script>
+    let x , y ,z
+    x = 1
+    y = 5
+    z = x + y
+    document.getElementById("demo3").innerHTML = "<strong>" + x + "</strong> + <strong>" + y + "</strong> = <strong>" + z + "</strong>";
+    // HTML tag ke sath print karne ke liye innerHTML zaroori hai
+    document.getElementById("demo3").innerHTML = "<span style='color: red;'>" + z + "</span>";
+
+    </script>
+
+<button onclick="Reveal()">Ready To Reveal</button>
+<p id="Plan1"></p>
+<p id="Plan2"></p>
+
+<script>
+    function Reveal() {
+        document.getElementById("Plan1").innerHTML = "Plan 1: <strong>Buy a Car</strong>";
+        document.getElementById("Plan2").innerHTML = "Plan 2: <strong>Buy a Bike</strong>";
+    }
+</script>
+
+
+<input id="age" value="18" type="number">
+<button onclick="checkAge()">Check Age</button>
+<p id="ageResult"></p>  
 </body>
 </html>
 
