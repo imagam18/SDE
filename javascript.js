@@ -79,41 +79,158 @@ console.log(getVal(50))
 // {
 //     if(i==25){
 //         continue
-//     }
-// console.log(i)
+// //     }
+// // console.log(i)
 
+// // }
+
+// // let j = 1;
+
+// // while(j<11){
+// //     console.log(j)
+// //     j++;
+// // }
+
+// i = 1;
+// // do{
+// //     console.log(i);
+// //     i ++;
+
+// // }
+// // while(i < 5)
+
+// for(let i = 10; i>0;i--){
+//     if( i %2!=0 ){console.log(i)}
+// } 
+// let num = 5
+// for(let i = 1; i<=10; i++)
+//         {console.log(`${5} X ${i} = ${5 * i}`)}
+
+// // let vbal =Number(prompt("Give me a number:"))
+
+// // console.log(vbal)
+
+
+
+
+// let fnc = function(){
+//     console.log("hehehhehehheheh")
+// }
+// fnc();
+ 
+
+// //fat arrow function
+
+
+// let fcn = ()=>{
+//     console.log("why it is there")
 // }
 
-// let j = 1;
+// fcn();
 
-// while(j<11){
-//     console.log(j)
-//     j++;
+// let dance = (V1) => {
+//     console.log(`${V1} is dancing`);
 // }
 
-i = 1;
-// do{
-//     console.log(i);
-//     i ++;
+// dance("Agam");
 
+// // v1 =Number(prompt("Enter 1st Number:"))
+// // v2 =Number(prompt("Enter 2nd Number:"))
+
+// // let add = (v1,v2)=>{
+// //     let sum = v1 +v2;
+// //     console.log(`Your Sum ${sum}`)
+// // }
+
+// // add(v1,v2);
+
+
+// let abcd = (...val) => {
+//     console.log(val)
 // }
-// while(i < 5)
-
-for(let i = 10; i>0;i--){
-    if( i %2!=0 ){console.log(i)}
-} 
-let num = 5
-for(let i = 1; i<=10; i++)
-        {console.log(`${5} X ${i} = ${5 * i}`)}
-
-// let vbal = prompt("Give me a number:")
-
-// console.log(vbal)
+// abcd(1,2,3,4,5,6,7,8,9);
 
 
 
-function dance (){
-    console.log("Agam Saxena");
+// function class1(val){
+
+//     console.log("Im class1")
+//     val();
+// }
+// class1(function(){
+//     console.log("Agam Saxena")
+// })
+
+// function abcd(){
+    
+// }
+
+
+
+
+function B1(){
+    console.log("Agam bahdur")
+    return function(){
+        console.log("Agam saxena")
+
+    }
 }
 
-dance();
+B1()()
+
+
+
+function c1(val){
+    console.log("im first");
+    val();
+}
+c1(function(){
+    console.log("Im second")
+})
+
+let f = 20
+
+function abab(){
+    console.log("Im not new")
+}
+
+function hue(){
+    f++;;
+    console.log(f);
+}
+
+
+abab()
+hue();
+
+
+
+
+function dam(){
+    let Name = "Sona"
+    return function(){
+        console.log(Name)
+    }
+}
+dam()()
+
+
+function bmi(weight,height){
+    return weight/(height*height)
+}
+
+console.log(Math.round(bmi(70,1.7)))
+console.log(bmi(50,1.3).toFixed(2))
+
+
+
+function disCounCal(discount){
+        return function(price){
+            return price -price *(discount)/100;
+        }
+
+}
+
+disOunter=disCounCal(10)
+console.log("Your lft money aftr discunt:")
+console.log(disOunter(500).toFixed(2))
