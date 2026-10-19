@@ -234,3 +234,62 @@ function disCounCal(discount){
 disOunter=disCounCal(10)
 console.log("Your lft money aftr discunt:")
 console.log(disOunter(500).toFixed(2))
+
+
+let arr = [6,4,7]
+
+ar1 = arr.sort((a,b)=> a-b)
+console.log(ar1)
+
+arr.forEach(function(val){
+    console.log(val*2)
+})
+
+newArr =arr.map(function(val){
+    return 9 * val
+})
+console.log(newArr );
+
+let arr1 = [5.6,2,7,9]
+arr1.sort((a,b)=>b-a);
+console.log(arr1);
+
+
+arr1.forEach(function(val){console.log(val +5)})
+arr1.forEach((val)=>console.log(val+5))
+
+
+let new_creation = arr1.map((val)=>  val -5);
+new_creation.sort((a,b)=> a-b)
+console.log(new_creation)
+
+
+arrrr = [1,2,3,4,5,64,6,6]
+
+new_arr =arrrr.filter(function(val){
+    if (val > 4) return true
+})
+
+console.log(new_arr)
+
+
+let redefine = [1,2,3,4,7,8,9]
+
+sum = redefine.reduce(function(accumulator , val){
+    return accumulator +val;
+},0);
+
+console.log(sum)
+
+let fruit = ['Apple','Banana','Mango'];
+console.log(fruit[1])
+
+fruit.push('Mango');
+fruit.unshift("Pinneapple");
+
+fruit.forEach((val)=> console.log(val));
+
+fruit['Banana'] = fruit['Kiwi']
+
+console.log(fruit)
+
