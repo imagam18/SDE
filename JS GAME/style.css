@@ -1,0 +1,136 @@
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML and Body */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* CSS Variables */
+:root {
+    --bg-primary-color: rgb(29, 28, 28);
+    --text-primary-color: rgb(213, 206, 206);
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 40px;
+    --space-3xl: 48px;
+
+    /* Border */
+    --border-primary-color: #444444;
+
+    /* Border Radius */
+    --border-radius-xs: 4px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-2xl: 24px;
+    --border-radius-3xl: 28px;
+}
+
+/* Global Styling */
+html {
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Main Layout */
+main,
+section {
+    width: 100%;
+    min-height: 100%;
+}
+
+section {
+    padding: var(--space-2xl);
+}
+
+/* Scoreboard Container */
+
+/* Scoreboard Container */
+section .infos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    border: none;
+    padding: 0;
+}
+
+/* Separate Boxes */
+.infos .info {
+    flex: 1;
+    padding: var(--space-md);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    background-color: #252424;
+}
+
+/* Labels */
+.infos .info h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Values */
+.infos .info span {
+    color: white;
+    font-weight: 700;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    section {
+        padding: var(--space-md);
+    }
+
+    section .infos {
+        gap: var(--space-sm);
+    }
+
+    .infos .info {
+        padding: var(--space-sm);
+    }
+
+    .infos .info h3 {
+        font-size: 13px;
+    }
+}
+
+
+/* Individual Score Items */
+.infos .info {
+    padding: var(--space-xs) var(--space-sm);
+}
+
+/* Score Headings */
+.infos .info h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Score Values */
+.infos .info span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
