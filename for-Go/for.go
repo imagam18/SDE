@@ -1,41 +1,21 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
+type payment struct{}
+
+func (p payment) makePayment(amount float32) {
+	razorpay := razorpay{}
+	razorpay.pay(amount)
+}
+
+type razorpay struct {
+}
+
+func (r razorpay) pay(amount float32) {
+	fmt.Println("Payment of", amount, "made using Razorpay")
+}
 func main() {
-	switch time.Now().Weekday() {
-	case time.Wednesday, time.Monday:
-		fmt.Println("Weekend")
-	case time.Tuesday, time.Saturday:
-		fmt.Println("Hanuman Ji")
-	}
-
-	Whoami := func(i interface{}) {
-		switch t := i.(type) {
-		case int:
-			fmt.Println("It is Integer")
-		case bool:
-			fmt.Println("It is Bool")
-		case string:
-			fmt.Println("It is String")
-		default:
-			fmt.Println("Others")
-			_ = t
-		}
-	}
-	Whoami(5456)
-	// declrtion Array
-	var nums [4]int
-
-	nums[0] = 1
-
-	fmt.Println(nums)
-
-	var num = make([]int, 2)
-
-	fmt.Println(num)
-
+	payment := payment{}
+	payment.makePayment(100.0)
 }
