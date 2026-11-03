@@ -2,7 +2,10 @@ package config
 
 import (
 	"flag"
+	"log"
 	"os"
+
+	"github.com/ilyakaznacheev/cleanenv"
 )
 
 type HTTPServer struct {
@@ -20,15 +23,16 @@ func MustLoad() *Config {
 	var configPath string
 	configPath = os.Getenv("CONFIG_PATH")
 	if configPath == "" {
-		flag := flag.String("config", "config.yaml", "Path to config file")
+		configFlag := flag.String("config", "config.yaml", "Path to config file")
 		flag.Parse()
-		configPath = *flag
+		configPath = *configFlag
+	}
 
 	if configPath == "" {
 		log.Fatal("config path is not provided")
 	}
 
-	if _,err := os.Stat(configPath); os.IsNotExist(err) {
+	if _, err := os.Stat(configPath); os.IsNotExist(err) {
 		log.Fatalf("config file does not exist: %s", configPath)
 	}
 	var cfg Config
